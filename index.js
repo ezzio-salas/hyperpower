@@ -167,11 +167,17 @@ exports.decorateTerm = (Term, { React, notify }) => {
         : [toHex(this.props.cursorColor)];
       const numParticles = PARTICLE_NUM_RANGE();
       for (let i = 0; i < numParticles; i++) {
+        /*
+        -TODO 
+        Use the preference color instead of Rainbow particles
+
         const colorCode = colors[i % colors.length];
         const r = parseInt(colorCode.slice(1, 3), 16);
         const g = parseInt(colorCode.slice(3, 5), 16);
         const b = parseInt(colorCode.slice(5, 7), 16);
         const color = [r, g, b];
+        */
+       const color=[241,128,9]
         this._particles.push(this._createParticle(x, y, color));
       }
       if (length === 0) {
